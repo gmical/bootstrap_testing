@@ -1,18 +1,78 @@
-#primary-nav{
+#primary-nav {
+  background-color: #527318;
+  padding-left: 5%;
+}
+
+#primary-brand {
+  font-size: 200%;
+  color: #ffe75e;
+}
+
+#navbarTogglerDemo01 {
+  color: #ff6f5e;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+#intro-statement {
+  font-size: 120%;
+  margin-top: 3%;
+  padding-left: 5%;
+}
+
+/* Code pulled from other projects */
+body {
+  font-family: 'Montserrat';
   background-color: #fefefe;
-}
-
-#primary-brand{
-  font-size: 200%;
-  color: #ff6f5e;
-}
-
-#navbarTogglerDemo01{
-  color: #ff6f5e;
 
 }
 
-h1{
-  color: red;
-  font-size: 200%;
+.navbar {
+  padding: 0 0 4.5rem 0;
+}
+
+.nav-item {
+  padding: 0 18px;
+  margin-left: auto;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: 'Montserrat'
+
+
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.container-fluid {
+  padding: 3% 10%;
+}
+
+#features{
+  padding: 7% 15%;
+}
+
+.icon {
+  color: #3BBA34;
+  margin-bottom: 1rem;
+}
+
+/* psudo class */
+.icon:hover {
+  color: #64D15F;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 5%;
 }
