@@ -25,6 +25,12 @@ h1 {
   padding-left: 5%;
 }
 
+#featured-carousel{
+  margin: auto;
+  text-align: center;
+
+}
+
 /* Code pulled from other projects */
 body {
   font-family: 'Montserrat';
