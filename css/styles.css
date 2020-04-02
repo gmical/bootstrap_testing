@@ -23,12 +23,14 @@ h1 {
   font-size: 120%;
   margin-top: 3%;
   padding-left: 5%;
+  background-color: #fefefe;
+
 }
 
 #featured-carousel{
   margin: auto;
   text-align: center;
-
+  background-color: #fefefe;
 }
 
 /* Code pulled from other projects */
@@ -65,7 +67,7 @@ body {
 }
 
 #features{
-  padding: 7% 15%;
+  padding: 3% 15%;
 }
 
 .icon {
