@@ -1,5 +1,5 @@
 #primary-nav {
-  background-color: #527318;
+  background-color: 	#aea97f;
   padding-left: 5%;
 }
 
@@ -46,7 +46,11 @@ h1 {
 
 }
 
-
+#profiles-section{
+  border-radius: 0 3px 3px 0;
+  border-left: 5%;
+  border-right: 5%;
+}
 
 
 
