@@ -1,5 +1,5 @@
 #primary-nav {
-  background-color: 	#aea97f;
+  background-color: #bfcd7e;
   padding-left: 5%;
 }
 
@@ -24,46 +24,34 @@ h1 {
   margin-top: 3%;
   padding-left: 5%;
   background-color: #fefefe;
-
 }
 
-#featured-carousel{
+#featured-carousel {
   margin: auto;
   text-align: center;
   background-color: #fefefe;
 }
 
-.the-statement{
+.the-statement {
   margin-top: 10%;
 }
 
-#landscaping{
+#landscaping {}
 
-}
-
-.sellpadding{
+.sellpadding {
   padding-top: 5%;
-
 }
 
-#profiles-section{
+#profiles-section {
   border-radius: 0 3px 3px 0;
   border-left: 5%;
   border-right: 5%;
 }
 
-
-
-
-
-
-
-
 /* Code pulled from other projects */
 body {
   font-family: 'Montserrat';
   background-color: #fefefe;
-
 }
 
 .navbar {
@@ -78,8 +66,6 @@ body {
 .nav-link {
   font-size: 1.2rem;
   font-family: 'Montserrat'
-
-
 }
 
 .navbar-brand {
@@ -92,10 +78,9 @@ body {
   padding: 3% 10%;
 }
 
-#features{
+#features {
   padding: 3% 15%;
-  padd
-  background-color: #fefefe;
+  padd background-color: #fefefe;
 }
 
 .icon {
