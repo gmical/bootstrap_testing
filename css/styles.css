@@ -48,6 +48,8 @@ h1 {
   border-right: 5%;
 }
 
+
+
 /* Code pulled from other projects */
 body {
   font-family: 'Montserrat';
@@ -96,4 +98,5 @@ body {
 .feature-box {
   text-align: center;
   padding: 5%;
+  margin: auto;
 }
