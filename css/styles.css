@@ -21,7 +21,7 @@ h1 {
 
 #intro-statement {
   font-size: 120%;
-  margin-top: 3%;
+
   padding-left: 5%;
   background-color: #fefefe;
 }
@@ -53,9 +53,12 @@ h1 {
 }
 
 .buttonSpacing{
-  margin-left: 2%;
+  margin-left: 8%;
 }
 
+.buyButton{
+  margin-top: 2%;
+}
 
 
 /* Code pulled from other projects */
