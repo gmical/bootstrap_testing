@@ -89,6 +89,9 @@ h1 {
   color: #ee7777;
 }
 
+.h1Color :hover{
+  color: #8e2e6a;
+}
 
 
 /* Code pulled from other projects */
