@@ -24,6 +24,7 @@ h1 {
 
   padding-left: 5%;
   background-color: #fefefe;
+
 }
 
 #featured-carousel {
@@ -35,6 +36,8 @@ h1 {
 .the-statement {
   margin-top: 10%;
 }
+
+
 
 #landscaping {}
 
@@ -63,6 +66,12 @@ h1 {
   text-align: center;
 
 }
+
+.title-img{
+  margin-top: 17%;
+}
+
+
 
 
 /* Code pulled from other projects */
