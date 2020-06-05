@@ -103,12 +103,17 @@ h1 {
 
 }
 
+a {
 
+}
 /* Code pulled from other projects */
 body {
   font-family: 'Montserrat';
   background-color: #fefefe;
+  text-decoration: none;
 }
+
+
 
 .navbar {
   padding: 0 0 4.5rem 0;
