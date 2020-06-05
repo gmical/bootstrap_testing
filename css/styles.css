@@ -93,6 +93,16 @@ h1 {
   color: #8e2e6a;
 }
 
+.clickable{
+  color: black;
+
+}
+
+.clickable :hover{
+  color: #ee7777;
+
+}
+
 
 /* Code pulled from other projects */
 body {
