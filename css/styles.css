@@ -64,6 +64,9 @@ h1 {
 
 .profilePicture{
   text-align: center;
+  width: auto;
+  height: auto;
+  padding-top: 5%;
 
 }
 
