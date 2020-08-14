@@ -17,6 +17,29 @@ h1 {
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 900;
+  text-decoration: underline;
+}
+
+.carousel-indicators{
+
+}
+
+.carousel-control-next{
+  background-color: #bfcd7e;
+}
+
+.carousel-control-prev{
+  background-color: #bfcd7e;
+
+}
+
+p{
+  font-size: 1.35rem;
+  padding-bottom: 2%;
+}
+
+h4{
+  font-size: 2rem;
 }
 
 #intro-statement {
@@ -67,6 +90,7 @@ h1 {
   width: auto;
   height: auto;
   padding-top: 5%;
+  padding-bottom: 5%;
 
 }
 
