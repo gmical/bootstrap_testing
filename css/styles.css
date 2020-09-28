@@ -186,3 +186,36 @@ body {
   padding: 5%;
   margin: auto;
 }
+
+.quantity-setter .increment-btn {
+  margin-top: 0;
+  border-radius: 0;
+  border: 1px solid var(--accent-color);
+}
+
+.sr-legal-text {
+  color: var(--gray-light);
+  text-align: center;
+  font-size: 13px;
+  line-height: 17px;
+  margin-top: 12px;
+}
+
+.quantity-setter {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.quantity-setter input {
+  border-radius: 0;
+  width: 50px;
+  padding: 0;
+  text-align: center;
+}
+
+.quantity-setter .increment-btn {
+  margin-top: 0;
+  border-radius: 0;
+  border: 1px solid var(--accent-color);
+}
