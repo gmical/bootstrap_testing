@@ -11,7 +11,10 @@
 
 
   <!--STYLE SHEET LINK (*CSS)-->
+  <!--STYLE SHEET LINK (*CSS)-->
   <link rel="stylesheet" href="..\css\styles.css">
+  <link rel="stylesheet" href="..\css\global.css">
+  <script src="https://js.stripe.com/v3/"> </script>
 
 
   <!--BOOTSTRAP LINK-->
@@ -99,9 +102,24 @@
           </a>
         </div>
 
-
-
+        <!--
         <button type="button" class="btn btn btn-outline-danger btn-lg buyButton" disabled>Out of stock</button>
+
+      -->
+
+                <button type="button" class="btn btn btn-outline-success btn-lg buyButton" id="basic-photo-button">
+                  Buy for $<span id="total">100</span>
+                </button>
+                <div class="quantity-setter">
+                  <button class="increment-btn btn-lg" id="subtract" disabled>-</button>
+                  <input type="number" id="quantity-input" min="1" value="1" />
+                  <button class="increment-btn btn-lg" id="add">+</button>
+                </div>
+
+                <p class="sr-legal-text">Limit 3 per person</p>
+
+
+
         <!--
           Button types:
           btn btn-outline-danger
@@ -287,6 +305,108 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
 
+      <script>
+        // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
+        var PUBLISHABLE_KEY = "pk_live_84zbnqelVkz7TrMa7oCsUvUt00k33w3moX";
+        // Replace with the domain you want your users to be redirected back to after payment
+        var DOMAIN = "https://wildlandsplants.com/";
+          // Replace with a Price for your own product (created either in the Stripe Dashboard or with the API)
+          // You can also supply a SKU or Plan ID for
+          var PRICE_ID = "price_1HQE2rFAU92cZ8oDSmJFgcdd";
+
+        if (PUBLISHABLE_KEY === "pk_1234") {
+          console.log(
+            "Replace the hardcoded publishable key with your own publishable key: https://dashboard.stripe.com/test/apikeys"
+          );
+        }
+
+        if (PRICE_ID === "price_1234") {
+          console.log(
+            "Replace the hardcoded SKU ID with your own SKU: https://stripe.com/docs/api/skus"
+          );
+        }
+
+        var MIN_PHOTOS = 1;
+        var MAX_PHOTOS = 3;
+
+        var stripe = Stripe(PUBLISHABLE_KEY);
+
+        var basicPhotoButton = document.getElementById("basic-photo-button");
+        document
+          .getElementById("quantity-input")
+          .addEventListener("change", function(evt) {
+            // Ensure customers only buy between 1 and 10 photos
+            if (evt.target.value < MIN_PHOTOS) {
+              evt.target.value = MIN_PHOTOS;
+            }
+            if (evt.target.value > MAX_PHOTOS) {
+              evt.target.value = MAX_PHOTOS;
+            }
+          });
+
+        var updateQuantity = function(evt) {
+          if (evt && evt.type === "keypress" && evt.keyCode !== 13) {
+            return;
+          }
+
+          var isAdding = evt.target.id === "add";
+          var inputEl = document.getElementById("quantity-input");
+          var currentQuantity = parseInt(inputEl.value);
+
+          document.getElementById("add").disabled = false;
+          document.getElementById("subtract").disabled = false;
+
+          var quantity = isAdding ? currentQuantity + 1 : currentQuantity - 1;
+
+          inputEl.value = quantity;
+          document.getElementById("total").textContent = quantity * 100;
+
+          // Disable the button if the customers hits the max or min
+          if (quantity === MIN_PHOTOS) {
+            document.getElementById("subtract").disabled = true;
+          }
+          if (quantity === MAX_PHOTOS) {
+            document.getElementById("add").disabled = true;
+          }
+        };
+
+        Array.from(document.getElementsByClassName("increment-btn")).forEach(
+          element => {
+            element.addEventListener("click", updateQuantity);
+          }
+        );
+
+        // Handle any errors from Checkout
+        var handleResult = function(result) {
+          if (result.error) {
+            var displayError = document.getElementById("error-message");
+            displayError.textContent = result.error.message;
+          }
+        };
+
+        basicPhotoButton.addEventListener("click", function() {
+          console.log(1)
+          var quantity = parseInt(
+            document.getElementById("quantity-input").value
+          );
+
+          // Make the call to Stripe.js to redirect to the checkout page
+          // with the current quantity
+          stripe
+            .redirectToCheckout({
+              mode: 'payment',
+              lineItems: [{
+                price: PRICE_ID,
+                quantity: quantity
+              }],
+              //            successUrl: DOMAIN + "/success.html?session_id={CHECKOUT_SESSION_ID}",
+              //            cancelUrl: DOMAIN + "/canceled.html"
+              successUrl: DOMAIN + "/success.html",
+              cancelUrl: DOMAIN + "/canceled.html"
+            })
+            .then(handleResult);
+        });
+      </script>
 </body>
 
 </html>

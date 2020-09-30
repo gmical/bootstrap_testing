@@ -6,7 +6,7 @@
   <meta charset="utf-8">
 
 
-  <title>Uvaria chamae</title>
+  <title>WFN Sticker Pack!</title>
   <link rel="icon" href="..\images\wlFavicon.ico">
 
 
@@ -73,25 +73,29 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <!--
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+            <!--
             -->
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="" src="..\images\plants\Uvariachamae1.jpg" alt="First slide">
+              <img class="" src="..\images\merch\WFNGroup1.jpg" alt="First slide">
             </div>
-
+            <div class="carousel-item">
+              <img class="" src="..\images\merch\WFN1.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="" src="..\images\merch\JaboSticker1.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="" src="..\images\merch\NavarretiaSticker1.jpg" alt="Fourth slide">
+            </div>
 
             <!--
-            <div class="carousel-item">
-              <img class="" src="..\images\plants\Syzygiumpaniculatum2.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="" src="..\images\plants\syzygiumpaniculatum1.jpg" alt="Third slide">
-            </div>
+
             -->
 
           </div>
@@ -108,7 +112,7 @@
 
 
         <button type="button" class="btn btn btn-outline-success btn-lg buyButton" id="basic-photo-button">
-          Buy for $<span id="total">60</span>.00
+          Buy for $<span id="total">7.50</span>
         </button>
         <div class="quantity-setter">
           <button class="increment-btn btn-lg" id="subtract" disabled>-</button>
@@ -116,7 +120,7 @@
           <button class="increment-btn btn-lg" id="add">+</button>
         </div>
 
-        <p class="sr-legal-text">Limit 3 per person</p>
+        <p class="sr-legal-text"></p>
 
 
         <!--
@@ -149,65 +153,10 @@
 
 
 
+<!--
 
+-->
       <div class="col-lg-6">
-        <h1>Uvaria chamae</h1>
-
-        <br>
-        <p>U. chamae is in the Annonaceae family and is found in the tropical regions of Africa north of the equator.  The fruit forms in a habit similat to other Annonaceae, such as Asimina triloba.  The fruit is said to be delicious and preferred to be eaten out of hand.  One feature that brings an attractive element to this tree, is that the flowers and most parts of the tree are strongly fragrant.  The plant is widely used for its medicinal effects within it’s native range and has been used to develop treatments for diseases such as Malaria.
-          <br>
-This ornamental, edible, and medicinal plant has value in tropical gardens.  It has an unknown frost hardiness but for the brave soul who wants to push the limits, this is definitely an important member to add to the collection.
-</p>
-        <br>
-
-        <h4>Family:</h4>
-        <p>Annonaceae</p>
-
-        <h4>Common Name / Native Name:</h4>
-        <p>Bush Banana</p>
-
-
-        <h4>Range:</h4>
-        <p>Central Africa </p>
-
-        <h4>Sun:</h4>
-        <p>Full sun / Part shade</p>
-
-        <h4>Height:</h4>
-        <p>Up to 12 feet</p>
-
-        <h4>Width:</h4>
-        <p>Up to 12 feet</p>
-
-        <h4>Foliage:</h4>
-        <p>Light green foliage, lanceolate and similar to other Annonaceae</p>
-
-        <h4>Flower:</h4>
-        <p>Inconspicuous yellow flowers born in bunches</p>
-
-        <h4>Fruit:</h4>
-        <p> A fruit that forms in bunches similar to bananas. It is orange on the outside an orangeish yellow flesh interior.  </p>
-
-        <h4>Soil Type / pH: </h4>
-        <p>Prefers acidity </p>
-
-        <h4>USDA Climate Zones:</h4>
-        <p>Undetermined, likely 10a+</p>
-
-        <h4>Cold Hardiness:</h4>
-        <p>N/A</p>
-
-        <h4>Edibility:</h4>
-        <p>Delicious fruit, great for eating out of hand and to be used in preserves or other creative applications.
-           Fruit is believed to have medicinal benefit as well as other parts of the plant. </p>
-
-
-        <h4>Age to Maturity:</h4>
-        <p> 4-8 years</p>
-
-
-
-
 
       </div>
 
@@ -317,7 +266,7 @@ This ornamental, edible, and medicinal plant has value in tropical gardens.  It 
       var DOMAIN = "https://wildlandsplants.com/";
         // Replace with a Price for your own product (created either in the Stripe Dashboard or with the API)
         // You can also supply a SKU or Plan ID for
-        var PRICE_ID = "price_1HNpbyFAU92cZ8oDd3zcNQ8M";
+        var PRICE_ID = "price_1HNpN4FAU92cZ8oDfvM47Ve7";
 
       if (PUBLISHABLE_KEY === "pk_1234") {
         console.log(
@@ -364,7 +313,7 @@ This ornamental, edible, and medicinal plant has value in tropical gardens.  It 
         var quantity = isAdding ? currentQuantity + 1 : currentQuantity - 1;
 
         inputEl.value = quantity;
-        document.getElementById("total").textContent = quantity * 60;
+        document.getElementById("total").textContent = quantity * 7.5;
 
         // Disable the button if the customers hits the max or min
         if (quantity === MIN_PHOTOS) {
