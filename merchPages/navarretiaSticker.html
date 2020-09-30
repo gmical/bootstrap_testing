@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+
+  <title>Navarretia Sticker!</title>
+  <link rel="icon" href="..\images\wlFavicon.ico">
+
+
+  <!--STYLE SHEET LINK (*CSS)-->
+  <link rel="stylesheet" href="..\css\styles.css">
+  <link rel="stylesheet" href="..\css\global.css">
+
+
+
+  <!--BOOTSTRAP LINK-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!--  font awesome icons -->
+  <script src="https://kit.fontawesome.com/8322160eb7.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900|Ubuntu&display=swap" rel="stylesheet">
+
+  <script src="https://js.stripe.com/v3/"> </script>
+
+</head>
+
+
+<body>
+
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-light" id="primary-nav">
+
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="..\index.html" id="primary-brand">
+      <img src="..\images\banner2.png" width="65%" height="65%" alt=""></a>
+
+    <div class="container-fluid">
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="..\plantShop.html">Nursery Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="..\plantProfiles.html">Plant Profiles</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="plantDescription">
+    <div class="row container-fluid">
+      <!--
+      <div class="col-lg-6 profilePicture">
+        <img src="..\images\plants\syzygiumpaniculatum1.jpg"  alt="">
+      </div>
+    -->
+      <div class="col-lg-6 profilePicture">
+
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+
+
+            <!--
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            -->
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="" src="..\images\merch\NavarretiaSticker1.jpg" alt="First slide">
+
+
+            <!--
+          </div>
+          <div class="carousel-item">
+            <img class="" src="..\images\merch\WFN1.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="" src="..\images\merch\JaboSticker1.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="" src="..\images\merch\NavarretiaSticker1.jpg" alt="Fourth slide">
+          </div>
+            -->
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+
+
+        <button type="button" class="btn btn btn-outline-success btn-lg buyButton" id="basic-photo-button">
+          Buy for $<span id="total">3.50</span>
+        </button>
+        <div class="quantity-setter">
+          <button class="increment-btn btn-lg" id="subtract" disabled>-</button>
+          <input type="number" id="quantity-input" min="1" value="1" />
+          <button class="increment-btn btn-lg" id="add">+</button>
+        </div>
+
+        <p class="sr-legal-text"></p>
+
+
+        <!--
+        <button type="button" class="btn btn btn-outline-danger btn-lg buyButton" disabled>Out of stock</button>
+
+          Button types:
+          btn btn-outline-danger
+          btn btn-outline-success
+          -->
+        <div class="row container-fluid">
+
+          <!--More Plants, Shop, Home-->
+          <div class="feature-box col-lg-4 col-md-4">
+            <a href="..\plantProfiles.html"><button type="button" class="btn btn-outline-secondary btn-lg">More Plant Profiles</button></a>
+          </div>
+          <div class="feature-box col-lg-4 col-md-4">
+            <a href="..\plantShop.html"><button type="button" class="btn btn-outline-secondary btn-lg">Shop</button></a>
+          </div>
+          <div class="feature-box col-lg-4 col-md-4">
+            <a href="..\index.html"><button type="button" class="btn btn-outline-secondary btn-lg">Home</button></a>
+          </div>
+
+
+
+
+        </div>
+
+      </div>
+
+
+
+
+<!--
+
+-->
+      <div class="col-lg-6">
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small indigo">
+
+    <!-- Footer Links -->
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="..\index.html" class="hlColor">Home</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="..\plantShop.html" class="hlColor">Nursery Store</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="..\plantProfiles.html" class="hlColor">Plant Profiles</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!" class="hlColor">Contact Us</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+      <hr class="rgba-white-light" style="margin: 0 15%;">
+
+      <!-- Grid row-->
+      <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
+      <!-- Grid row-->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-12">
+
+          <div class="mt-3 flex-center text-center d-flex justify-content-center">
+
+            <!-- Facebook -->
+            <a class="fb-ic" href="https://www.facebook.com/wildlandsplants" target="_blank">
+              <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+            </a>
+
+            <!--Instagram-->
+            <a class="ins-ic" href="https://www.instagram.com/wildlandsplants/" target="_blank">
+              <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Grid row-->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="..\index.html" target="_blank"> wildlandsplants.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+
+  <!--Bootstrap Extended requirements from template getboostrap-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+
+
+    <script>
+      // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
+      var PUBLISHABLE_KEY = "pk_live_84zbnqelVkz7TrMa7oCsUvUt00k33w3moX";
+      // Replace with the domain you want your users to be redirected back to after payment
+      var DOMAIN = "https://wildlandsplants.com/";
+        // Replace with a Price for your own product (created either in the Stripe Dashboard or with the API)
+        // You can also supply a SKU or Plan ID for
+        var PRICE_ID = "price_1HNpKuFAU92cZ8oDI1zEYlUw";
+
+      if (PUBLISHABLE_KEY === "pk_1234") {
+        console.log(
+          "Replace the hardcoded publishable key with your own publishable key: https://dashboard.stripe.com/test/apikeys"
+        );
+      }
+
+      if (PRICE_ID === "price_1234") {
+        console.log(
+          "Replace the hardcoded SKU ID with your own SKU: https://stripe.com/docs/api/skus"
+        );
+      }
+
+      var MIN_PHOTOS = 1;
+      var MAX_PHOTOS = 3;
+
+      var stripe = Stripe(PUBLISHABLE_KEY);
+
+      var basicPhotoButton = document.getElementById("basic-photo-button");
+      document
+        .getElementById("quantity-input")
+        .addEventListener("change", function(evt) {
+          // Ensure customers only buy between 1 and 10 photos
+          if (evt.target.value < MIN_PHOTOS) {
+            evt.target.value = MIN_PHOTOS;
+          }
+          if (evt.target.value > MAX_PHOTOS) {
+            evt.target.value = MAX_PHOTOS;
+          }
+        });
+
+      var updateQuantity = function(evt) {
+        if (evt && evt.type === "keypress" && evt.keyCode !== 13) {
+          return;
+        }
+
+        var isAdding = evt.target.id === "add";
+        var inputEl = document.getElementById("quantity-input");
+        var currentQuantity = parseInt(inputEl.value);
+
+        document.getElementById("add").disabled = false;
+        document.getElementById("subtract").disabled = false;
+
+        var quantity = isAdding ? currentQuantity + 1 : currentQuantity - 1;
+
+        inputEl.value = quantity;
+        document.getElementById("total").textContent = quantity * 3.5;
+
+        // Disable the button if the customers hits the max or min
+        if (quantity === MIN_PHOTOS) {
+          document.getElementById("subtract").disabled = true;
+        }
+        if (quantity === MAX_PHOTOS) {
+          document.getElementById("add").disabled = true;
+        }
+      };
+
+      Array.from(document.getElementsByClassName("increment-btn")).forEach(
+        element => {
+          element.addEventListener("click", updateQuantity);
+        }
+      );
+
+      // Handle any errors from Checkout
+      var handleResult = function(result) {
+        if (result.error) {
+          var displayError = document.getElementById("error-message");
+          displayError.textContent = result.error.message;
+        }
+      };
+
+      basicPhotoButton.addEventListener("click", function() {
+        console.log(1)
+        var quantity = parseInt(
+          document.getElementById("quantity-input").value
+        );
+
+        // Make the call to Stripe.js to redirect to the checkout page
+        // with the current quantity
+        stripe
+          .redirectToCheckout({
+            mode: 'payment',
+            lineItems: [{
+              price: PRICE_ID,
+              quantity: quantity
+            }],
+            //            successUrl: DOMAIN + "/success.html?session_id={CHECKOUT_SESSION_ID}",
+            //            cancelUrl: DOMAIN + "/canceled.html"
+            successUrl: DOMAIN + "/success.html",
+            cancelUrl: DOMAIN + "/canceled.html"
+          })
+          .then(handleResult);
+      });
+    </script>
+
+</body>
+
+</html>
