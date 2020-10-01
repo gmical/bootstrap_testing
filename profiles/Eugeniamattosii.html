@@ -109,7 +109,7 @@
       -->
 
                 <button type="button" class="btn btn btn-outline-success btn-lg buyButton" id="basic-photo-button">
-                  Buy for $<span id="total">65</span>
+                  Buy for $<span id="total">75</span>
                 </button>
                 <div class="quantity-setter">
                   <button class="increment-btn btn-lg" id="subtract" disabled>-</button>
@@ -312,7 +312,7 @@
           var DOMAIN = "https://wildlandsplants.com/";
             // Replace with a Price for your own product (created either in the Stripe Dashboard or with the API)
             // You can also supply a SKU or Plan ID for
-            var PRICE_ID = "price_1H1lNaFAU92cZ8oDe0VTKvOo";
+            var PRICE_ID = "price_1HXJWPFAU92cZ8oDP6I8q3IE";
 
           if (PUBLISHABLE_KEY === "pk_1234") {
             console.log(
@@ -359,7 +359,7 @@
             var quantity = isAdding ? currentQuantity + 1 : currentQuantity - 1;
 
             inputEl.value = quantity;
-            document.getElementById("total").textContent = quantity * 65;
+            document.getElementById("total").textContent = quantity * 75;
 
             // Disable the button if the customers hits the max or min
             if (quantity === MIN_PHOTOS) {

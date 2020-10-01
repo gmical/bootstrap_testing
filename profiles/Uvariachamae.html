@@ -108,7 +108,7 @@
 
 
         <button type="button" class="btn btn btn-outline-success btn-lg buyButton" id="basic-photo-button">
-          Buy for $<span id="total">60</span>.00
+          Buy for $<span id="total">70</span>.00
         </button>
         <div class="quantity-setter">
           <button class="increment-btn btn-lg" id="subtract" disabled>-</button>
@@ -317,7 +317,7 @@ This ornamental, edible, and medicinal plant has value in tropical gardens.  It 
       var DOMAIN = "https://wildlandsplants.com/";
         // Replace with a Price for your own product (created either in the Stripe Dashboard or with the API)
         // You can also supply a SKU or Plan ID for
-        var PRICE_ID = "price_1HNpbyFAU92cZ8oDd3zcNQ8M";
+        var PRICE_ID = "price_1HXIysFAU92cZ8oDP4uAvjZU";
 
       if (PUBLISHABLE_KEY === "pk_1234") {
         console.log(
@@ -364,7 +364,7 @@ This ornamental, edible, and medicinal plant has value in tropical gardens.  It 
         var quantity = isAdding ? currentQuantity + 1 : currentQuantity - 1;
 
         inputEl.value = quantity;
-        document.getElementById("total").textContent = quantity * 60;
+        document.getElementById("total").textContent = quantity * 70;
 
         // Disable the button if the customers hits the max or min
         if (quantity === MIN_PHOTOS) {
